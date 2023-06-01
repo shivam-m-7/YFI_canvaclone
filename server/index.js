@@ -14,12 +14,12 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Library");
 });
 
-app.listen(process.env.port, async () => {
+app.listen(process.env.PORT, async () => {
   try {
     await connection;
     console.log("DB Connected");
   } catch (err) {
     console.log("DB not connected");
   }
-  console.log(`Server is running on port ${process.env.port}`);
+  console.log(`Server is running on PORT ${process.env.PORT}`);
 });
